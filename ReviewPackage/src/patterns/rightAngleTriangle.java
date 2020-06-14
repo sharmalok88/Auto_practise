@@ -1,12 +1,15 @@
 package patterns;
 
+import java.util.Scanner;
+
 public class rightAngleTriangle {
 	
-	public void triangle()
+	public void triangle(int a)
 	{
-		for(int i=1;i<=5;i++)
+		System.out.println("********************** Trianlge **********************");
+		for(int i=1;i<=a;i++)
 		{
-			for(int j=5;j>=i;j--)
+			for(int j=a;j>=i;j--)
 			{
 				System.out.print(" ");
 			}
@@ -21,9 +24,10 @@ public class rightAngleTriangle {
 		}
 	}
 	
-	public void rightAngleTriangle()
+	public void rightAngleTriangle(int a)
 	{
-		for(int i=1;i<=5;i++)
+		System.out.println("********************* Right Angle Trianlge *********************");
+		for(int i=1;i<=a;i++)
 		{
 			for(int j=1;j<=i;j++)
 			{
@@ -33,11 +37,12 @@ public class rightAngleTriangle {
 		}
 	}
 	
-	public void leftAngleTriangle()
+	public void leftAngleTriangle(int a)
 	{
-		for(int i=1;i<=5;i++)
+		System.out.println("********************* Left Angle Trianlge *********************");
+		for(int i=1;i<=a;i++)
 		{
-			for(int j=5;j>=i;j--)
+			for(int j=a;j>=i;j--)
 			{
 				System.out.print(" ");
 			}
@@ -51,11 +56,12 @@ public class rightAngleTriangle {
 	}
 
 
-	public void oppRightAngleTriangle()
+	public void oppRightAngleTriangle(int a)
 	{
-		for(int i=1;i<=5;i++)
+		System.out.println("****************** Opposite Right Angle Trianlge ******************");
+		for(int i=1;i<=a;i++)
 		{
-			for(int j=5;j>=i;j--)
+			for(int j=a;j>=i;j--)
 			{
 				System.out.print("*");
 			}
@@ -65,13 +71,16 @@ public class rightAngleTriangle {
 	
 	public static void main(String[] args) {
 		rightAngleTriangle ref = new rightAngleTriangle();
-		ref.leftAngleTriangle();
-		System.out.println("***************************************");
-		ref.rightAngleTriangle();
-		System.out.println("***************************************");
-		ref.triangle();
-		System.out.println("***************************************");
-		ref.oppRightAngleTriangle();
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter any number to make triangle shapes : ");
+		int x = s.nextInt();
+		ref.leftAngleTriangle(x);
+		System.out.println();
+		ref.rightAngleTriangle(x);
+		System.out.println();
+		ref.triangle(x);
+		System.out.println();
+		ref.oppRightAngleTriangle(x);
 
 	}
 
